@@ -45,7 +45,7 @@ public class Inicio extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logo sin fondo.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 200, 100));
 
         btnEmergencia.setBackground(new java.awt.Color(255, 255, 255));
         btnEmergencia.setForeground(new java.awt.Color(51, 51, 55));

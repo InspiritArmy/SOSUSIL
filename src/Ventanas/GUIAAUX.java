@@ -115,6 +115,11 @@ public class GUIAAUX extends javax.swing.JFrame {
         Hemorragias.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Hemorragias.setContentAreaFilled(false);
         Hemorragias.setOpaque(true);
+        Hemorragias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HemorragiasActionPerformed(evt);
+            }
+        });
         getContentPane().add(Hemorragias, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 120, 60));
 
         Desmayos.setBackground(new java.awt.Color(51, 204, 0));
@@ -124,6 +129,11 @@ public class GUIAAUX extends javax.swing.JFrame {
         Desmayos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Desmayos.setContentAreaFilled(false);
         Desmayos.setOpaque(true);
+        Desmayos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DesmayosActionPerformed(evt);
+            }
+        });
         getContentPane().add(Desmayos, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 120, 60));
 
         Quemaduras.setBackground(new java.awt.Color(255, 102, 51));
@@ -133,6 +143,11 @@ public class GUIAAUX extends javax.swing.JFrame {
         Quemaduras.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Quemaduras.setContentAreaFilled(false);
         Quemaduras.setOpaque(true);
+        Quemaduras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QuemadurasActionPerformed(evt);
+            }
+        });
         getContentPane().add(Quemaduras, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 120, 60));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salida final.png"))); // NOI18N
@@ -198,6 +213,9 @@ public class GUIAAUX extends javax.swing.JFrame {
 
     private void Hemorragias1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Hemorragias1ActionPerformed
         // TODO add your handling code here:
+        GUIAAUXFractura  fractura = new GUIAAUXFractura();
+        fractura.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_Hemorragias1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -210,7 +228,31 @@ public class GUIAAUX extends javax.swing.JFrame {
 
     private void Quemaduras1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Quemaduras1ActionPerformed
         // TODO add your handling code here:
+        GUIAAUXOtros  otros = new GUIAAUXOtros();
+        otros.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_Quemaduras1ActionPerformed
+
+    private void HemorragiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HemorragiasActionPerformed
+        // TODO add your handling code here:
+        GUIAAUXHemo  hemorragia = new GUIAAUXHemo();
+        hemorragia.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_HemorragiasActionPerformed
+
+    private void DesmayosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DesmayosActionPerformed
+        // TODO add your handling code here:
+        GUIAAUXDesmayos  desmayos = new GUIAAUXDesmayos();
+        desmayos.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_DesmayosActionPerformed
+
+    private void QuemadurasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuemadurasActionPerformed
+        // TODO add your handling code here:
+        GUIAAUXQuemaduraas  quemadura = new GUIAAUXQuemaduraas();
+        quemadura.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_QuemadurasActionPerformed
 
     /**
      * @param args the command line arguments
