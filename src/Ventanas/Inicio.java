@@ -45,7 +45,7 @@ public class Inicio extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logo sin fondo.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 200, 100));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 210, 90));
 
         btnEmergencia.setBackground(new java.awt.Color(255, 255, 255));
         btnEmergencia.setForeground(new java.awt.Color(51, 51, 55));
@@ -71,7 +71,7 @@ public class Inicio extends javax.swing.JFrame {
         jButtonC2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jButtonC2.setForeground(new java.awt.Color(51, 51, 51));
         jButtonC2.setText("CAMPUS 2");
-        jButtonC2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonC2.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
         jButtonC2.setContentAreaFilled(false);
         jButtonC2.setOpaque(true);
         jButtonC2.addActionListener(new java.awt.event.ActionListener() {
@@ -85,7 +85,7 @@ public class Inicio extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(51, 51, 51));
         jButton2.setText("CAMPUS 1");
-        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
         jButton2.setContentAreaFilled(false);
         jButton2.setOpaque(true);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -116,7 +116,7 @@ public class Inicio extends javax.swing.JFrame {
         jToggleButton1.setForeground(new java.awt.Color(51, 51, 51));
         jToggleButton1.setSelected(true);
         jToggleButton1.setText("Casos Info");
-        jToggleButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jToggleButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
         jToggleButton1.setContentAreaFilled(false);
         jToggleButton1.setOpaque(true);
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
