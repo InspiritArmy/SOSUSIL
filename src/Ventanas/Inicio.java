@@ -37,19 +37,18 @@ public class Inicio extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         Home = new javax.swing.JButton();
         jToggleButton1 = new javax.swing.JToggleButton();
-        Logo = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Inicio SOS USIL");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logo sin fondo.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 210, 90));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/7d6f7e0f-4644-4ead-a038-8d10c6e6ed6b.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 190, 180));
 
         btnEmergencia.setBackground(new java.awt.Color(255, 255, 255));
         btnEmergencia.setForeground(new java.awt.Color(51, 51, 55));
-        btnEmergencia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/phone.png"))); // NOI18N
+        btnEmergencia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/telefono-inteligente.png"))); // NOI18N
         btnEmergencia.setToolTipText("");
         btnEmergencia.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         btnEmergencia.setBorderPainted(false);
@@ -65,13 +64,13 @@ public class Inicio extends javax.swing.JFrame {
                 btnEmergenciaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEmergencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, -1, 60));
+        getContentPane().add(btnEmergencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 50, 70));
 
         jButtonC2.setBackground(new java.awt.Color(204, 204, 255));
         jButtonC2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jButtonC2.setForeground(new java.awt.Color(51, 51, 51));
         jButtonC2.setText("CAMPUS 2");
-        jButtonC2.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
+        jButtonC2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonC2.setContentAreaFilled(false);
         jButtonC2.setOpaque(true);
         jButtonC2.addActionListener(new java.awt.event.ActionListener() {
@@ -85,7 +84,7 @@ public class Inicio extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(51, 51, 51));
         jButton2.setText("CAMPUS 1");
-        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
+        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton2.setContentAreaFilled(false);
         jButton2.setOpaque(true);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -95,7 +94,7 @@ public class Inicio extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 140, 60));
 
-        Home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/casa.png"))); // NOI18N
+        Home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/marcador-de-posicion2.png"))); // NOI18N
         Home.setBorder(null);
         Home.setBorderPainted(false);
         Home.setContentAreaFilled(false);
@@ -109,14 +108,14 @@ public class Inicio extends javax.swing.JFrame {
                 HomeActionPerformed(evt);
             }
         });
-        getContentPane().add(Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
+        getContentPane().add(Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
 
         jToggleButton1.setBackground(new java.awt.Color(255, 153, 0));
         jToggleButton1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jToggleButton1.setForeground(new java.awt.Color(51, 51, 51));
         jToggleButton1.setSelected(true);
         jToggleButton1.setText("Casos Info");
-        jToggleButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
+        jToggleButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jToggleButton1.setContentAreaFilled(false);
         jToggleButton1.setOpaque(true);
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -124,11 +123,7 @@ public class Inicio extends javax.swing.JFrame {
                 jToggleButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 110, 40));
-
-        Logo.setForeground(new java.awt.Color(255, 255, 255));
-        Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Logo_usil.png"))); // NOI18N
-        getContentPane().add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, -1, -1));
+        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 420, 110, 40));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/acercadeusil.jpg"))); // NOI18N
         getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -212,7 +207,6 @@ public class Inicio extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Fondo;
     private javax.swing.JButton Home;
-    private javax.swing.JLabel Logo;
     private javax.swing.JButton btnEmergencia;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonC2;
