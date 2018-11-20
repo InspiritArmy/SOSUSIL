@@ -1,12 +1,18 @@
 package Ventanas;
 
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 
 
 public class CAMPUS1 extends javax.swing.JFrame {
     
-    
+     public Image getIconImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Imagenes/logofinal1.png"));
+        return retValue;
+    }
+     
     DefaultComboBoxModel modeloPabellon, modeloPiso;
     
     public CAMPUS1() {
@@ -82,9 +88,11 @@ public class CAMPUS1 extends javax.swing.JFrame {
         EnviarC1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImage(getIconImage());
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnEmergenciac2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/phone.png"))); // NOI18N
+        btnEmergenciac2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/telefono-inteligente.png"))); // NOI18N
         btnEmergenciac2.setBorder(null);
         btnEmergenciac2.setBorderPainted(false);
         btnEmergenciac2.setContentAreaFilled(false);
@@ -99,7 +107,7 @@ public class CAMPUS1 extends javax.swing.JFrame {
                 btnEmergenciac2ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEmergenciac2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, 80, 50));
+        getContentPane().add(btnEmergenciac2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, -10, 60, 80));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/sos transparente.png"))); // NOI18N
         jLabel5.setMaximumSize(new java.awt.Dimension(100, 83));
@@ -110,7 +118,7 @@ public class CAMPUS1 extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/C1.jpg"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, -1, 360));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/casa.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/marcador-de-posicion2.png"))); // NOI18N
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
@@ -124,7 +132,7 @@ public class CAMPUS1 extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -160,7 +168,7 @@ public class CAMPUS1 extends javax.swing.JFrame {
                 jComboBoxC1PabellonActionPerformed(evt);
             }
         });
-        getContentPane().add(jComboBoxC1Pabellon, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 460, -1, -1));
+        getContentPane().add(jComboBoxC1Pabellon, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 460, -1, -1));
 
         jComboBoxPisoC1.setForeground(new java.awt.Color(51, 51, 51));
         jComboBoxPisoC1.setSelectedItem(jComboBoxPisoC1);
@@ -243,10 +251,27 @@ public class CAMPUS1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnEmergenciac2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmergenciac2ActionPerformed
-        JOptionPane.showInputDialog("\n (1) Policia "
-            + "\n (2) Ambulancia "
-            + "\n (3) Bomberos "
-            + "\n (4) Salir");
+        int opc = Integer.parseInt(JOptionPane.showInputDialog(null, "\n MENU "+
+              "\n (1) Policia"+ 
+              "\n (2) Ambulancia "+
+              "\n (3) Bomberos "+
+              "\n (4) Salir"));
+        do {
+            switch(opc){
+                case 1:{
+                    JOptionPane.showMessageDialog(rootPane, "105");
+                }
+                break;
+                case 2:{
+                    JOptionPane.showMessageDialog(rootPane, "116");
+                }
+                break;
+                case 3:{
+                    JOptionPane.showMessageDialog(rootPane, "106");
+                }
+                break;
+            }
+        }while(opc > 4);
     }//GEN-LAST:event_btnEmergenciac2ActionPerformed
 
     /**
