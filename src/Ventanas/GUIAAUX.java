@@ -1,12 +1,18 @@
 package Ventanas;
 
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 
 
 public class GUIAAUX extends javax.swing.JFrame {
     
-    
+     public Image getIconImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Imagenes/logofinal1.png"));
+        return retValue;
+    }
+     
     DefaultComboBoxModel modeloPabellon, modeloPiso;
     
     public GUIAAUX() {
@@ -39,23 +45,31 @@ public class GUIAAUX extends javax.swing.JFrame {
         jDesktopPane1 = new javax.swing.JDesktopPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImage(getIconImage());
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Hemorragias1.setBackground(new java.awt.Color(0, 153, 153));
         Hemorragias1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Hemorragias1.setForeground(new java.awt.Color(255, 255, 255));
-        Hemorragias1.setText("Fractura");
-        Hemorragias1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Hemorragias1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/button_fractura.png"))); // NOI18N
+        Hemorragias1.setBorder(null);
+        Hemorragias1.setBorderPainted(false);
         Hemorragias1.setContentAreaFilled(false);
-        Hemorragias1.setOpaque(true);
+        Hemorragias1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Hemorragias1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Hemorragias1.setIconTextGap(-3);
+        Hemorragias1.setVerifyInputWhenFocusTarget(false);
+        Hemorragias1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Hemorragias1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         Hemorragias1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Hemorragias1ActionPerformed(evt);
             }
         });
-        getContentPane().add(Hemorragias1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 120, 60));
+        getContentPane().add(Hemorragias1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 140, 70));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/casa.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/marcador-de-posicion2.png"))); // NOI18N
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
@@ -69,9 +83,9 @@ public class GUIAAUX extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
-        btnEmergenciac2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/phone.png"))); // NOI18N
+        btnEmergenciac2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/telefono-inteligente.png"))); // NOI18N
         btnEmergenciac2.setBorder(null);
         btnEmergenciac2.setBorderPainted(false);
         btnEmergenciac2.setContentAreaFilled(false);
@@ -86,71 +100,92 @@ public class GUIAAUX extends javax.swing.JFrame {
                 btnEmergenciac2ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEmergenciac2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 80, 50));
+        getContentPane().add(btnEmergenciac2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 10, 70, 70));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/sos transparente.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logofinal1.png"))); // NOI18N
         jLabel5.setMaximumSize(new java.awt.Dimension(100, 83));
         jLabel5.setMinimumSize(new java.awt.Dimension(100, 83));
         jLabel5.setPreferredSize(new java.awt.Dimension(100, 83));
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 150, 140));
 
         Quemaduras1.setBackground(new java.awt.Color(153, 0, 204));
         Quemaduras1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Quemaduras1.setForeground(new java.awt.Color(255, 255, 255));
-        Quemaduras1.setText("Otros");
-        Quemaduras1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Quemaduras1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/button_otros.png"))); // NOI18N
+        Quemaduras1.setBorder(null);
+        Quemaduras1.setBorderPainted(false);
         Quemaduras1.setContentAreaFilled(false);
-        Quemaduras1.setOpaque(true);
+        Quemaduras1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Quemaduras1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Quemaduras1.setIconTextGap(-3);
+        Quemaduras1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Quemaduras1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         Quemaduras1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Quemaduras1ActionPerformed(evt);
             }
         });
-        getContentPane().add(Quemaduras1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, 120, 60));
+        getContentPane().add(Quemaduras1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, 140, 70));
 
         Hemorragias.setBackground(new java.awt.Color(255, 51, 51));
         Hemorragias.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Hemorragias.setForeground(new java.awt.Color(255, 255, 255));
-        Hemorragias.setText("Hemorragias");
-        Hemorragias.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Hemorragias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/button_hemorragias.png"))); // NOI18N
+        Hemorragias.setBorder(null);
+        Hemorragias.setBorderPainted(false);
         Hemorragias.setContentAreaFilled(false);
-        Hemorragias.setOpaque(true);
+        Hemorragias.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Hemorragias.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Hemorragias.setIconTextGap(-3);
+        Hemorragias.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Hemorragias.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         Hemorragias.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 HemorragiasActionPerformed(evt);
             }
         });
-        getContentPane().add(Hemorragias, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 120, 60));
+        getContentPane().add(Hemorragias, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 140, 70));
 
         Desmayos.setBackground(new java.awt.Color(51, 204, 0));
         Desmayos.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Desmayos.setForeground(new java.awt.Color(255, 255, 255));
-        Desmayos.setText("Desmayos");
-        Desmayos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Desmayos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/button_desmayos.png"))); // NOI18N
+        Desmayos.setToolTipText("");
+        Desmayos.setBorder(null);
+        Desmayos.setBorderPainted(false);
         Desmayos.setContentAreaFilled(false);
-        Desmayos.setOpaque(true);
+        Desmayos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Desmayos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Desmayos.setIconTextGap(-3);
+        Desmayos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Desmayos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         Desmayos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DesmayosActionPerformed(evt);
             }
         });
-        getContentPane().add(Desmayos, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 120, 60));
+        getContentPane().add(Desmayos, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 140, 70));
 
         Quemaduras.setBackground(new java.awt.Color(255, 102, 51));
         Quemaduras.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Quemaduras.setForeground(new java.awt.Color(255, 255, 255));
-        Quemaduras.setText("Quemaduras");
-        Quemaduras.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Quemaduras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/button_quemaduras.png"))); // NOI18N
+        Quemaduras.setBorder(null);
+        Quemaduras.setBorderPainted(false);
         Quemaduras.setContentAreaFilled(false);
-        Quemaduras.setOpaque(true);
+        Quemaduras.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Quemaduras.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Quemaduras.setIconTextGap(-3);
+        Quemaduras.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Quemaduras.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         Quemaduras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 QuemadurasActionPerformed(evt);
             }
         });
-        getContentPane().add(Quemaduras, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 120, 60));
+        getContentPane().add(Quemaduras, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, 140, 70));
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salida final.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salida.png"))); // NOI18N
         jButton2.setBorder(null);
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
@@ -164,7 +199,7 @@ public class GUIAAUX extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 410, 150, 120));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 430, 80, 70));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/acercadeusil.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
