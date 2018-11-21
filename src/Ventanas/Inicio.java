@@ -271,6 +271,9 @@ public class Inicio extends javax.swing.JFrame implements Runnable{
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
         // TODO add your handling code here:
+        GUIAAUX guia = new GUIAAUX();
+        guia.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     /**

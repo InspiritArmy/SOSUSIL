@@ -6,7 +6,10 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
+
 public class Feedback extends javax.swing.JFrame {
+    
+    Conectar cn;
 
     public Feedback() {
         initComponents();
@@ -18,7 +21,7 @@ public class Feedback extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jLabelVal = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextAreaMessage = new javax.swing.JTextArea();
@@ -32,14 +35,16 @@ public class Feedback extends javax.swing.JFrame {
         jButtonSalir = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         btnEmergenciac2 = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-
-        jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel2.setText("Nombres:");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logofinal1.png"))); // NOI18N
+        jLabel5.setMaximumSize(new java.awt.Dimension(100, 83));
+        jLabel5.setMinimumSize(new java.awt.Dimension(100, 83));
+        jLabel5.setPreferredSize(new java.awt.Dimension(100, 83));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 160, 150));
 
         jLabelVal.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabelVal.setForeground(new java.awt.Color(255, 255, 255));
@@ -92,7 +97,6 @@ public class Feedback extends javax.swing.JFrame {
         jButtonSend.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButtonSend.setForeground(new java.awt.Color(255, 255, 255));
         jButtonSend.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avion-de-papel.png"))); // NOI18N
-        jButtonSend.setText("ENVIAR");
         jButtonSend.setBorder(null);
         jButtonSend.setBorderPainted(false);
         jButtonSend.setContentAreaFilled(false);
@@ -102,7 +106,7 @@ public class Feedback extends javax.swing.JFrame {
                 jButtonSendActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonSend, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, -1, -1));
+        getContentPane().add(jButtonSend, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, -1, -1));
 
         jButtonSalir.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButtonSalir.setForeground(new java.awt.Color(255, 255, 255));
@@ -151,12 +155,6 @@ public class Feedback extends javax.swing.JFrame {
         });
         getContentPane().add(btnEmergenciac2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 60, 70));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logofinal1.png"))); // NOI18N
-        jLabel5.setMaximumSize(new java.awt.Dimension(100, 83));
-        jLabel5.setMinimumSize(new java.awt.Dimension(100, 83));
-        jLabel5.setPreferredSize(new java.awt.Dimension(100, 83));
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 170, 150));
-
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/acercadeusil.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -168,7 +166,7 @@ public class Feedback extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonSalirActionPerformed
 
     private void jButtonSendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSendActionPerformed
-        Conectar cn=new Conectar();
+        cn=new Conectar();
 
         Connection reg=cn.conexion();
         String sql;
@@ -176,16 +174,16 @@ public class Feedback extends javax.swing.JFrame {
         String mail = jTextFieldMail.getText();
         String mensaje = jTextAreaMessage.getText();
         
-        int val = Integer.parseInt(jComboBoxValora.getItemAt(jComboBoxValora.getSelectedIndex()))  ;
+        int valoracion = Integer.parseInt(jComboBoxValora.getItemAt(jComboBoxValora.getSelectedIndex()))  ;
 
-        sql="insert into FeedBack(alias,mail,mensaje, val) Values (?,?,?,?)";
+        sql="insert into FeedBack(alias,mail,mensaje, valoracion) Values (?,?,?,?)";
         
         try {
             PreparedStatement pst=reg.prepareStatement(sql);
             pst.setString(1, alias);
             pst.setString(2, mail);
             pst.setString(3, mensaje);
-            pst.setInt(4, val);
+            pst.setInt(4, valoracion);
 
             int n=pst.executeUpdate();
             if(n!=0){
@@ -282,7 +280,6 @@ public class Feedback extends javax.swing.JFrame {
     private javax.swing.JButton jButtonSend;
     private javax.swing.JComboBox<String> jComboBoxValora;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabelMail;
     private javax.swing.JLabel jLabelMessage;
