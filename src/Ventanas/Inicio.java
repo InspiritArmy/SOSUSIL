@@ -235,10 +235,27 @@ public class Inicio extends javax.swing.JFrame implements Runnable{
     }//GEN-LAST:event_HomeActionPerformed
 
     private void btnEmergenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmergenciaActionPerformed
-        JOptionPane.showInputDialog("\n (1) Policia "
+        int opc = Integer.parseInt(JOptionPane.showInputDialog(null, "\n MENU"
+            + "\n (1) Policia "
             + "\n (2) Ambulancia "
             + "\n (3) Bomberos "
-            + "\n (4) Salir");
+            + "\n (4) Salir"));
+        do{
+            switch(opc){
+                case 1:{
+                    JOptionPane.showMessageDialog(rootPane, "105");
+                }
+                break;
+                case 2:{
+                    JOptionPane.showMessageDialog(rootPane, "106");
+                }
+                break;
+                case 3:{
+                    JOptionPane.showMessageDialog(rootPane, "116");
+                }
+                break;
+            }
+        }while(opc > 4);
     }//GEN-LAST:event_btnEmergenciaActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
