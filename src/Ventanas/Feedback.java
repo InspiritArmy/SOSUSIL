@@ -175,14 +175,17 @@ public class Feedback extends javax.swing.JFrame {
         String alias= jTextFieldName.getText();
         String mail = jTextFieldMail.getText();
         String mensaje = jTextAreaMessage.getText();
-        int val = Integer.parseInt(jComboBoxValora.getActionCommand());
+        
+        int val = Integer.parseInt(jComboBoxValora.getItemAt(jComboBoxValora.getSelectedIndex()))  ;
 
-        sql="insert into articulos(codArt,cantStock,precioU) Values (?,?,?)";
+        sql="insert into FeedBack(alias,mail,mensaje, val) Values (?,?,?,?)";
+        
         try {
             PreparedStatement pst=reg.prepareStatement(sql);
             pst.setString(1, alias);
             pst.setString(2, mail);
             pst.setString(3, mensaje);
+            pst.setInt(4, val);
 
             int n=pst.executeUpdate();
             if(n!=0){
@@ -206,16 +209,34 @@ public class Feedback extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldNameActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Inicio c2 = new Inicio();
-        c2.setVisible(true);
+        Feedback fb = new Feedback();
+        fb.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnEmergenciac2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmergenciac2ActionPerformed
-        JOptionPane.showInputDialog("\n (1) Policia "
+        int opc = Integer.parseInt(JOptionPane.showInputDialog(null, "\n MENU"
+            + "\n (1) Policia "
             + "\n (2) Ambulancia "
             + "\n (3) Bomberos "
-            + "\n (4) Salir");
+            + "\n (4) Salir"));
+        do{
+            switch(opc){
+                case 1:{
+                    JOptionPane.showMessageDialog(rootPane, "105");
+                }
+                break;
+                case 2:{
+                    JOptionPane.showMessageDialog(rootPane, "106");
+                }
+                break;
+                case 3:{
+                    JOptionPane.showMessageDialog(rootPane, "116");
+                }
+                break;
+            }
+        }while(opc > 4);
+        
     }//GEN-LAST:event_btnEmergenciac2ActionPerformed
 
     /**

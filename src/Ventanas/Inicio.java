@@ -79,9 +79,9 @@ public class Inicio extends javax.swing.JFrame implements Runnable{
         jButtonC2 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         Home = new javax.swing.JButton();
-        jToggleButton1 = new javax.swing.JToggleButton();
         Fechalb = new javax.swing.JLabel();
         Horalb = new javax.swing.JLabel();
+        jToggleButton2 = new javax.swing.JToggleButton();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -97,7 +97,7 @@ public class Inicio extends javax.swing.JFrame implements Runnable{
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton1.setIconTextGap(-3);
         jButton1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
@@ -116,7 +116,7 @@ public class Inicio extends javax.swing.JFrame implements Runnable{
         btnEmergencia.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         btnEmergencia.setBorderPainted(false);
         btnEmergencia.setContentAreaFilled(false);
-        btnEmergencia.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEmergencia.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnEmergencia.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnEmergencia.setIconTextGap(-3);
         btnEmergencia.setPreferredSize(new java.awt.Dimension(59, 35));
@@ -136,7 +136,7 @@ public class Inicio extends javax.swing.JFrame implements Runnable{
         jButtonC2.setBorder(null);
         jButtonC2.setBorderPainted(false);
         jButtonC2.setContentAreaFilled(false);
-        jButtonC2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButtonC2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButtonC2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonC2.setIconTextGap(-3);
         jButtonC2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
@@ -146,7 +146,7 @@ public class Inicio extends javax.swing.JFrame implements Runnable{
                 jButtonC2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonC2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 150, 60));
+        getContentPane().add(jButtonC2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 150, 60));
 
         jButton2.setBackground(new java.awt.Color(204, 204, 255));
         jButton2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
@@ -155,7 +155,7 @@ public class Inicio extends javax.swing.JFrame implements Runnable{
         jButton2.setBorder(null);
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton2.setIconTextGap(-3);
         jButton2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
@@ -165,13 +165,13 @@ public class Inicio extends javax.swing.JFrame implements Runnable{
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 140, 60));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 140, 60));
 
         Home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/marcador-de-posicion2.png"))); // NOI18N
         Home.setBorder(null);
         Home.setBorderPainted(false);
         Home.setContentAreaFilled(false);
-        Home.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Home.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Home.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Home.setIconTextGap(-3);
         Home.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
@@ -183,26 +183,6 @@ public class Inicio extends javax.swing.JFrame implements Runnable{
         });
         getContentPane().add(Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
 
-        jToggleButton1.setBackground(new java.awt.Color(255, 153, 0));
-        jToggleButton1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jToggleButton1.setForeground(new java.awt.Color(51, 51, 51));
-        jToggleButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/button_casos-info.png"))); // NOI18N
-        jToggleButton1.setSelected(true);
-        jToggleButton1.setBorder(null);
-        jToggleButton1.setBorderPainted(false);
-        jToggleButton1.setContentAreaFilled(false);
-        jToggleButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jToggleButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jToggleButton1.setIconTextGap(-3);
-        jToggleButton1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jToggleButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, 170, 50));
-
         Fechalb.setFont(new java.awt.Font("Segoe UI Black", 2, 14)); // NOI18N
         Fechalb.setForeground(new java.awt.Color(0, 204, 204));
         Fechalb.setText("DD/MM/YYYY");
@@ -212,6 +192,26 @@ public class Inicio extends javax.swing.JFrame implements Runnable{
         Horalb.setForeground(new java.awt.Color(0, 204, 204));
         Horalb.setText("00:00:00");
         getContentPane().add(Horalb, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 500, -1, 20));
+
+        jToggleButton2.setBackground(new java.awt.Color(255, 153, 0));
+        jToggleButton2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jToggleButton2.setForeground(new java.awt.Color(51, 51, 51));
+        jToggleButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/button_casos-info.png"))); // NOI18N
+        jToggleButton2.setSelected(true);
+        jToggleButton2.setBorder(null);
+        jToggleButton2.setBorderPainted(false);
+        jToggleButton2.setContentAreaFilled(false);
+        jToggleButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jToggleButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jToggleButton2.setIconTextGap(-3);
+        jToggleButton2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jToggleButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jToggleButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 170, 50));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/acercadeusil.jpg"))); // NOI18N
         getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -265,18 +265,13 @@ public class Inicio extends javax.swing.JFrame implements Runnable{
             this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        // TODO add your handling code here:
-        
-        GUIAAUX guiaaux = new GUIAAUX();
-        guiaaux.setVisible(true);
-        this.setVisible(false);
-
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -323,6 +318,6 @@ public class Inicio extends javax.swing.JFrame implements Runnable{
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonC2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JToggleButton jToggleButton2;
     // End of variables declaration//GEN-END:variables
 }
