@@ -187,7 +187,7 @@ public class Feedback extends javax.swing.JFrame {
             pst.setString(3, mensaje);
             pst.setString(4, valoracion);
             
-
+            //Los valores son añadidos a la Bd
             int n=pst.executeUpdate();
             if(n!=0){
                 JOptionPane.showMessageDialog(this, "Valores cargados .......");
@@ -199,7 +199,7 @@ public class Feedback extends javax.swing.JFrame {
         jTextFieldName.setText("");
         jTextFieldMail.setText("");
         jTextAreaMessage.setText("");
-        
+        //Se mueve a la pagina de inicio 
         Inicio inicio = new Inicio();
         inicio.setVisible(true);
         this.setVisible(false);

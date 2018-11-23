@@ -6,6 +6,8 @@ public class FeedBack {
     public String Alias;
     public String comentario;
     public String mail;
+    //Cambie la valoracion a un String en vez de un int
+    
     public String valoracion;
 
     public FeedBack(String Alias, String comentario, String mail, String valoracion) {
