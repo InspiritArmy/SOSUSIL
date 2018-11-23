@@ -1,23 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tablas;
 
-/**
- *
- * @author Nivardo Jr
- */
 public class FeedBack {
     
     public int IdFeedBack;
     public String Alias;
     public String comentario;
     public String mail;
-    public int valoracion;
+    public String valoracion;
 
-    public FeedBack(String Alias, String comentario, String mail, int valoracion) {
+    public FeedBack(String Alias, String comentario, String mail, String valoracion) {
         this.IdFeedBack = 0;
         this.Alias = Alias;
         this.comentario = comentario;
@@ -46,13 +37,17 @@ public class FeedBack {
     public void setMail(String mail) {
         this.mail = mail;
     }
-    public int getValoracion() {
+
+    public String getValoracion() {
         return valoracion;
     }
-    public void setValoracion(int valoracion) {
+
+    public void setValoracion(String valoracion) {
         this.valoracion = valoracion;
     }
+ 
     
+    @Override
     public String toString(){
         String cad="\n Alias: "+Alias+
                    "\n Mail: "+mail+
