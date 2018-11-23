@@ -129,12 +129,8 @@ public class Feedback extends javax.swing.JFrame implements Runnable{
         jLabelName.setText("Nombre:");
         getContentPane().add(jLabelName, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
 
+        jComboBoxValora.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jComboBoxValora.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5" }));
-        jComboBoxValora.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBoxValoraActionPerformed(evt);
-            }
-        });
         getContentPane().add(jComboBoxValora, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 410, -1, -1));
 
         jButtonSend.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -145,6 +141,11 @@ public class Feedback extends javax.swing.JFrame implements Runnable{
         jButtonSend.setContentAreaFilled(false);
         jButtonSend.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonSend.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jButtonSend.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonSendMouseClicked(evt);
+            }
+        });
         jButtonSend.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSendActionPerformed(evt);
@@ -231,8 +232,9 @@ public class Feedback extends javax.swing.JFrame implements Runnable{
         String mail = jTextFieldMail.getText();
         String mensaje = jTextAreaMessage.getText();
         
-        int valoracion = Integer.parseInt(jComboBoxValora.getItemAt(jComboBoxValora.getSelectedIndex()))  ;
-
+        String valoracion = jComboBoxValora.getSelectedItem().toString();
+        
+        
         sql="insert into FeedBack(alias,mail,mensaje, valoracion) Values (?,?,?,?)";
         
         try {
@@ -240,20 +242,27 @@ public class Feedback extends javax.swing.JFrame implements Runnable{
             pst.setString(1, alias);
             pst.setString(2, mail);
             pst.setString(3, mensaje);
-            pst.setInt(4, valoracion);
-
+            pst.setString(4, valoracion);
+            
+            //Los valores son añadidos a la Bd
             int n=pst.executeUpdate();
             if(n!=0){
                 JOptionPane.showMessageDialog(this, "Valores cargados .......");
             }
+            
         } catch (SQLException e) {
             System.out.println("Error encontrado  "+e.toString());
         }
+        jTextFieldName.setText("");
+        jTextFieldMail.setText("");
+        jTextAreaMessage.setText("");
+        //Se mueve a la pagina de inicio 
+        Inicio inicio = new Inicio();
+        inicio.setVisible(true);
+        this.setVisible(false);
+        
+        
     }//GEN-LAST:event_jButtonSendActionPerformed
-
-    private void jComboBoxValoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxValoraActionPerformed
-        jComboBoxValora.setSelectedIndex(4);
-    }//GEN-LAST:event_jComboBoxValoraActionPerformed
 
     private void jTextFieldMailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMailActionPerformed
         String email = jTextFieldMail.getText();
@@ -293,6 +302,11 @@ public class Feedback extends javax.swing.JFrame implements Runnable{
         }while(opc > 4);
         
     }//GEN-LAST:event_btnEmergenciac2ActionPerformed
+
+    private void jButtonSendMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonSendMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButtonSendMouseClicked
 
     /**
      * @param args the command line arguments
