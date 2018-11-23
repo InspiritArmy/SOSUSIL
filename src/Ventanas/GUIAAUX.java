@@ -234,10 +234,27 @@ public class GUIAAUX extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEmergenciac2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmergenciac2ActionPerformed
-        JOptionPane.showInputDialog("\n (1) Policia "
+        int opc = Integer.parseInt(JOptionPane.showInputDialog(null, "\n MENU"
+            + "\n (1) Policia "
             + "\n (2) Ambulancia "
             + "\n (3) Bomberos "
-            + "\n (4) Salir");
+            + "\n (4) Salir"));
+        do{
+            switch(opc){
+                case 1:{
+                    JOptionPane.showMessageDialog(rootPane, "105");
+                }
+                break;
+                case 2:{
+                    JOptionPane.showMessageDialog(rootPane, "106");
+                }
+                break;
+                case 3:{
+                    JOptionPane.showMessageDialog(rootPane, "116");
+                }
+                break;
+            }
+        }while(opc > 4);
     }//GEN-LAST:event_btnEmergenciac2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

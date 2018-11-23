@@ -79,16 +79,16 @@ public class GUIAAUXOtros extends javax.swing.JFrame {
         });
         getContentPane().add(btnEmergenciac2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 80, 70));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logofinal1.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logofinalc1.png"))); // NOI18N
         jLabel5.setMaximumSize(new java.awt.Dimension(100, 83));
         jLabel5.setMinimumSize(new java.awt.Dimension(100, 83));
         jLabel5.setPreferredSize(new java.awt.Dimension(100, 83));
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 160, 160));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 110, 110));
 
         jLabel2.setBackground(new java.awt.Color(204, 204, 204));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/otro.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/otros2.png"))); // NOI18N
         jLabel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, -1, 290));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 360, 280));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/anterior.png"))); // NOI18N
         jButton2.setBorder(null);
@@ -155,10 +155,27 @@ public class GUIAAUXOtros extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEmergenciac2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmergenciac2ActionPerformed
-        JOptionPane.showInputDialog("\n (1) Policia "
+        int opc = Integer.parseInt(JOptionPane.showInputDialog(null, "\n MENU"
+            + "\n (1) Policia "
             + "\n (2) Ambulancia "
             + "\n (3) Bomberos "
-            + "\n (4) Salir");
+            + "\n (4) Salir"));
+        do{
+            switch(opc){
+                case 1:{
+                    JOptionPane.showMessageDialog(rootPane, "105");
+                }
+                break;
+                case 2:{
+                    JOptionPane.showMessageDialog(rootPane, "106");
+                }
+                break;
+                case 3:{
+                    JOptionPane.showMessageDialog(rootPane, "116");
+                }
+                break;
+            }
+        }while(opc > 4);
     }//GEN-LAST:event_btnEmergenciac2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

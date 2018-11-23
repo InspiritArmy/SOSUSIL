@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import javax.swing.JFrame;
 /**
  *
  * @author Admin
@@ -31,6 +32,7 @@ public class Inicio extends javax.swing.JFrame implements Runnable{
         hilo=new Thread(this);
         hilo.start();
         setVisible(true);
+       
     }
     
     public void hora(){
@@ -82,6 +84,7 @@ public class Inicio extends javax.swing.JFrame implements Runnable{
         Fechalb = new javax.swing.JLabel();
         Horalb = new javax.swing.JLabel();
         jToggleButton2 = new javax.swing.JToggleButton();
+        jButton3 = new javax.swing.JButton();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -97,7 +100,7 @@ public class Inicio extends javax.swing.JFrame implements Runnable{
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton1.setIconTextGap(-3);
         jButton1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
@@ -116,7 +119,7 @@ public class Inicio extends javax.swing.JFrame implements Runnable{
         btnEmergencia.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         btnEmergencia.setBorderPainted(false);
         btnEmergencia.setContentAreaFilled(false);
-        btnEmergencia.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnEmergencia.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEmergencia.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnEmergencia.setIconTextGap(-3);
         btnEmergencia.setPreferredSize(new java.awt.Dimension(59, 35));
@@ -136,7 +139,7 @@ public class Inicio extends javax.swing.JFrame implements Runnable{
         jButtonC2.setBorder(null);
         jButtonC2.setBorderPainted(false);
         jButtonC2.setContentAreaFilled(false);
-        jButtonC2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButtonC2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonC2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonC2.setIconTextGap(-3);
         jButtonC2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
@@ -155,7 +158,7 @@ public class Inicio extends javax.swing.JFrame implements Runnable{
         jButton2.setBorder(null);
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton2.setIconTextGap(-3);
         jButton2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
@@ -171,7 +174,7 @@ public class Inicio extends javax.swing.JFrame implements Runnable{
         Home.setBorder(null);
         Home.setBorderPainted(false);
         Home.setContentAreaFilled(false);
-        Home.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Home.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Home.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Home.setIconTextGap(-3);
         Home.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
@@ -201,7 +204,7 @@ public class Inicio extends javax.swing.JFrame implements Runnable{
         jToggleButton2.setBorder(null);
         jToggleButton2.setBorderPainted(false);
         jToggleButton2.setContentAreaFilled(false);
-        jToggleButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jToggleButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jToggleButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jToggleButton2.setIconTextGap(-3);
         jToggleButton2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
@@ -212,6 +215,17 @@ public class Inicio extends javax.swing.JFrame implements Runnable{
             }
         });
         getContentPane().add(jToggleButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 170, 50));
+
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/button_feedbackff.png"))); // NOI18N
+        jButton3.setBorderPainted(false);
+        jButton3.setContentAreaFilled(false);
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, -1, -1));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/acercadeusil.jpg"))); // NOI18N
         getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -276,6 +290,12 @@ public class Inicio extends javax.swing.JFrame implements Runnable{
         this.setVisible(false);
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        Feedback feedback=new Feedback();
+        feedback.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -319,6 +339,7 @@ public class Inicio extends javax.swing.JFrame implements Runnable{
     private javax.swing.JButton btnEmergencia;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButtonC2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JToggleButton jToggleButton2;

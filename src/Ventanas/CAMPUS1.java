@@ -107,16 +107,16 @@ public class CAMPUS1 extends javax.swing.JFrame {
                 btnEmergenciac2ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEmergenciac2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, -10, 60, 80));
+        getContentPane().add(btnEmergenciac2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 60, 70));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/sos transparente.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logofinalc1.png"))); // NOI18N
         jLabel5.setMaximumSize(new java.awt.Dimension(100, 83));
         jLabel5.setMinimumSize(new java.awt.Dimension(100, 83));
         jLabel5.setPreferredSize(new java.awt.Dimension(100, 83));
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 110, 90));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/C1.jpg"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, -1, 360));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/c1f.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 300, 320));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/marcador-de-posicion2.png"))); // NOI18N
         jButton1.setBorder(null);
@@ -132,7 +132,7 @@ public class CAMPUS1 extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -140,7 +140,7 @@ public class CAMPUS1 extends javax.swing.JFrame {
         jLabel4.setText("Número de piso:");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 490, -1, -1));
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Sin título.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/sosf.png"))); // NOI18N
         jButton2.setToolTipText("");
         jButton2.setBorder(null);
         jButton2.setBorderPainted(false);
@@ -153,13 +153,13 @@ public class CAMPUS1 extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, -1, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, 120, 100));
 
         jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Nombre del Pabellón:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, -1, -1));
 
         jComboBoxC1Pabellon.setForeground(new java.awt.Color(51, 51, 51));
         jComboBoxC1Pabellon.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "C", "D", "E", "F", "G", "CAFETERÍA" }));
@@ -168,12 +168,12 @@ public class CAMPUS1 extends javax.swing.JFrame {
                 jComboBoxC1PabellonActionPerformed(evt);
             }
         });
-        getContentPane().add(jComboBoxC1Pabellon, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 460, -1, -1));
+        getContentPane().add(jComboBoxC1Pabellon, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 470, -1, -1));
 
         jComboBoxPisoC1.setForeground(new java.awt.Color(51, 51, 51));
         jComboBoxPisoC1.setSelectedItem(jComboBoxPisoC1);
         jComboBoxPisoC1.setToolTipText("");
-        getContentPane().add(jComboBoxPisoC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 490, -1, -1));
+        getContentPane().add(jComboBoxPisoC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/acercadeusil.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));

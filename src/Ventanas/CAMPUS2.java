@@ -93,7 +93,7 @@ public class CAMPUS2 extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ca2.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/marcador-de-posicion2.png"))); // NOI18N
         jButton1.setBorder(null);
@@ -128,7 +128,7 @@ public class CAMPUS2 extends javax.swing.JFrame {
         });
         getContentPane().add(btnEmergenciac2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 60, 70));
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Sin título.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/sosf.png"))); // NOI18N
         jButton2.setToolTipText("");
         jButton2.setBorder(null);
         jButton2.setBorderPainted(false);
@@ -143,11 +143,11 @@ public class CAMPUS2 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 430, -1, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logofinal1.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logofinalc1.png"))); // NOI18N
         jLabel5.setMaximumSize(new java.awt.Dimension(100, 83));
         jLabel5.setMinimumSize(new java.awt.Dimension(100, 83));
         jLabel5.setPreferredSize(new java.awt.Dimension(100, 83));
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 150, 140));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 110, 100));
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -237,10 +237,27 @@ public class CAMPUS2 extends javax.swing.JFrame {
     }//GEN-LAST:event_EnviarC1MouseClicked
 
     private void btnEmergenciac2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmergenciac2ActionPerformed
-        JOptionPane.showInputDialog("\n (1) Policia "
+        int opc = Integer.parseInt(JOptionPane.showInputDialog(null, "\n MENU"
+            + "\n (1) Policia "
             + "\n (2) Ambulancia "
             + "\n (3) Bomberos "
-            + "\n (4) Salir");
+            + "\n (4) Salir"));
+        do{
+            switch(opc){
+                case 1:{
+                    JOptionPane.showMessageDialog(rootPane, "105");
+                }
+                break;
+                case 2:{
+                    JOptionPane.showMessageDialog(rootPane, "106");
+                }
+                break;
+                case 3:{
+                    JOptionPane.showMessageDialog(rootPane, "116");
+                }
+                break;
+            }
+        }while(opc > 4);
     }//GEN-LAST:event_btnEmergenciac2ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

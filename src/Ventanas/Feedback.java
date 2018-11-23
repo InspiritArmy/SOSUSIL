@@ -1,20 +1,59 @@
 package Ventanas;
 
+import static Ventanas.Inicio.Fecha;
 import conexionBD.Conectar;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import javax.swing.JOptionPane;
 
 
-public class Feedback extends javax.swing.JFrame {
-    
+public class Feedback extends javax.swing.JFrame implements Runnable{
+    String hora,minutos,segundos;
+    Thread hilo;
     Conectar cn;
 
     public Feedback() {
         initComponents();
         setLocationRelativeTo(this);        
+        Fechalb.setText(Fecha());
+        hilo=new Thread(this);
+        hilo.start();
+        setVisible(true);
+    }
+    
+    public void hora(){
+        Calendar calendario=new GregorianCalendar();
+        Date horaactual=new Date();
+        calendario.setTime(horaactual);
+        hora=calendario.get(Calendar.HOUR_OF_DAY)>9?""+calendario.get(Calendar.HOUR_OF_DAY):"0"+calendario.get(Calendar.HOUR_OF_DAY);
+        minutos=calendario.get(Calendar.MINUTE)>9?""+calendario.get(Calendar.MINUTE):"0"+calendario.get(Calendar.MINUTE);
+        segundos=calendario.get(Calendar.SECOND)>9?""+calendario.get(Calendar.SECOND):"0"+calendario.get(Calendar.SECOND);
+    }
+    
+    public void run(){
+        Thread current=Thread.currentThread();
         
+        while(current==hilo){
+            hora();
+            Horalb.setText(hora+":"+minutos+":"+segundos);
+        }
+    }
+    
+    public static String Fecha(){
+        Date fecha=new Date();
+        SimpleDateFormat formatofecha=new SimpleDateFormat("dd/MM/YYY");
+        return formatofecha.format(fecha);
+    }
+    public Image getIconImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Imagenes/logofinal1.png"));
+        return retValue;
     }
 
     @SuppressWarnings("unchecked")
@@ -35,9 +74,13 @@ public class Feedback extends javax.swing.JFrame {
         jButtonSalir = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         btnEmergenciac2 = new javax.swing.JButton();
+        Horalb = new javax.swing.JLabel();
+        Fechalb = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImage(getIconImage());
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logofinal1.png"))); // NOI18N
@@ -100,13 +143,14 @@ public class Feedback extends javax.swing.JFrame {
         jButtonSend.setBorder(null);
         jButtonSend.setBorderPainted(false);
         jButtonSend.setContentAreaFilled(false);
+        jButtonSend.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonSend.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jButtonSend.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSendActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonSend, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, -1, -1));
+        getContentPane().add(jButtonSend, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, -1, -1));
 
         jButtonSalir.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButtonSalir.setForeground(new java.awt.Color(255, 255, 255));
@@ -115,6 +159,7 @@ public class Feedback extends javax.swing.JFrame {
         jButtonSalir.setBorder(null);
         jButtonSalir.setBorderPainted(false);
         jButtonSalir.setContentAreaFilled(false);
+        jButtonSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSalirActionPerformed(evt);
@@ -126,7 +171,7 @@ public class Feedback extends javax.swing.JFrame {
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton1.setIconTextGap(-3);
         jButton1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
@@ -142,7 +187,7 @@ public class Feedback extends javax.swing.JFrame {
         btnEmergenciac2.setBorder(null);
         btnEmergenciac2.setBorderPainted(false);
         btnEmergenciac2.setContentAreaFilled(false);
-        btnEmergenciac2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnEmergenciac2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEmergenciac2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnEmergenciac2.setIconTextGap(-3);
         btnEmergenciac2.setPreferredSize(new java.awt.Dimension(59, 35));
@@ -155,6 +200,16 @@ public class Feedback extends javax.swing.JFrame {
         });
         getContentPane().add(btnEmergenciac2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 60, 70));
 
+        Horalb.setFont(new java.awt.Font("Segoe UI Black", 2, 14)); // NOI18N
+        Horalb.setForeground(new java.awt.Color(0, 204, 204));
+        Horalb.setText("00:00:00");
+        getContentPane().add(Horalb, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 510, -1, 20));
+
+        Fechalb.setFont(new java.awt.Font("Segoe UI Black", 2, 14)); // NOI18N
+        Fechalb.setForeground(new java.awt.Color(0, 204, 204));
+        Fechalb.setText("DD/MM/YYYY");
+        getContentPane().add(Fechalb, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 510, 110, 20));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/acercadeusil.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -163,9 +218,11 @@ public class Feedback extends javax.swing.JFrame {
 
     private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirActionPerformed
         this.dispose();
+        
     }//GEN-LAST:event_jButtonSalirActionPerformed
 
     private void jButtonSendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSendActionPerformed
+        
         cn=new Conectar();
 
         Connection reg=cn.conexion();
@@ -207,7 +264,7 @@ public class Feedback extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldNameActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Feedback fb = new Feedback();
+        Inicio fb = new Inicio();
         fb.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -274,6 +331,8 @@ public class Feedback extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Fechalb;
+    private javax.swing.JLabel Horalb;
     private javax.swing.JButton btnEmergenciac2;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonSalir;
